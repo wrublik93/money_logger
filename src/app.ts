@@ -1,3 +1,16 @@
+import Invoice from './classes/Invoice.js';
+
+const invOne = new Invoice('Ivan', 'work with clients', 400);
+const invTwo = new Invoice('Mario', 'work with web', 200);
+
+let invoices: Invoice[] = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+
+invoices.forEach((inv) => {
+    console.log(inv.client, inv.amount, inv.format());
+})
+
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 const type = document.querySelector('#type') as HTMLSelectElement;
 const toFrom = document.querySelector('#toFrom') as HTMLInputElement;
